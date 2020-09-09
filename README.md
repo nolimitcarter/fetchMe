@@ -1,4 +1,4 @@
-<p align="center">FetchMe</p><br>
+<h1 align="center">fetchme</h1>
 
 <p align="center">A minimalist system information tool written in bash shell.</p><br>
 
