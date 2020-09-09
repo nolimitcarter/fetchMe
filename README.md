@@ -2,7 +2,7 @@
 
 <p align="center">A minimalist system information tool written in shell.</p><br>
 
-<img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image0.jpg" width="40%" align="right">
+<img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image0.jpg" width="30%" align="right">
 
 The goal of this project is to implement a simple system
 information tool in POSIX `sh` using features built into
