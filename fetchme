@@ -69,4 +69,3 @@ for ENT in "${ENTS[@]}"; do
 done
 printf "%s%b" "$PADC" "$OUTB\n"
 
-
