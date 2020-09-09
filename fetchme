@@ -58,6 +58,7 @@ mkent "OS" "$(cat /etc/os-release | grep NAME -m 1 | sed 's/NAME=//g' | sed 's/\
 mkent "User" "$(printenv USER)"
 mkent "Shell" "$(basename $(printenv SHELL))"
 mkent "Date" "$(date '+%d %B %Y')"
+mkent "Uptime" "$(uptime -p)"
 
 # print everything
 
