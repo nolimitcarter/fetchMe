@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image1.jpg" width="320px"></p>
+<p align="center"><img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image1.jpg" width="350px"></p>
 
 <h1 align="center">fetchMe</h1>
 
