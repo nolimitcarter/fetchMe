@@ -1,3 +1,5 @@
+<p align="center"><img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image1.jpg" width="320px"></p>
+
 <h1 align="center">fetchMe</h1>
 
 <p align="center">A minimalist system information tool written in bash shell.</p><br>
