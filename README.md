@@ -1,6 +1,6 @@
-# fetchme
+<p align="center">FetchMe</p><br>
 
-<p align="center">A minimalist system information tool written in shell.</p><br>
+<p align="center">A minimalist system information tool written in bash shell.</p><br>
 
 <img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image0.jpg" width="30%" align="right">
 
