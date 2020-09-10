@@ -54,10 +54,20 @@ CTEXT="$WHT" # color of entry text
 # add entries here!
 # format: mkent NAME TEXT
 #
+
+#sep=
+#s=$d$f0$sep$t
+
+#w=
+#wmname="WM" "$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")"
+
+
 mkent "OS" "$(cat /etc/os-release | grep NAME -m 1 | sed 's/NAME=//g' | sed 's/\"//g')"
 mkent "User" "$(printenv USER)"
 mkent "Shell" "$(basename $(printenv SHELL))"
+mkent "WM" "$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")"
 mkent "Date" "$(date '+%d %B %Y')"
+
 mkent "Uptime" "$(uptime -p)"
 
 # print everything
