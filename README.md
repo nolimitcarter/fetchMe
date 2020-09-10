@@ -6,8 +6,6 @@
 
 <img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image1.jpg" width="30%" align="right">
 <br>
-<br>
-<br>
 FetchMe is a command-line system information tool written
 in bash. FetchMe displays fully cusomizable information 
 about your operating system, software and hardware in an 
