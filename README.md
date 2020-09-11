@@ -10,7 +10,8 @@ FetchMe is a command-line system information tool written
 in bash. FetchMe displays fully cusomizable information 
 about your operating system, software and hardware in an 
 aesthetic and visually pleasing way.
-
+<br>
+<br>
 ## License 
 
 Licensed under the GPL - see the [LICENSE](LICENSE.md) for details.
