@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# Minimalist sysinfo script
+#
+# nolimitcarter
+# github.com/nolimitcarter
+#################################
+
+# color escapes
+BLK="\033[38;2;0;0;0m"
+RED="\033[38;2;255;0;0m"
+GRN="\033[38;2;0;128;0m"
+YLW="\033[38;2;255;255;0m"
+BLU="\033[38;2;95;175;255m"   #0;175;255m"
+PUR="\033[38;2;255;215;255m"
+CYN="\033[38;2;95;175;255m"   #0;255;255m"
+BRED="\033[38;2;255;0;0m"
+BGRN="\033[38;2;0;128;128m"
+BYLW="\033[38;2;255;255;0m"
+BBLU="\033[38;2;0;175;255m"
+BPUR="\033[38;2;255;215;255m" #192;192;192m"
+BCYN="\033[38;2;95;175;255m"  #0;255;255m"
+WHT="\e[37m"
+RST="\e[0m"
+
+# build the color bars
+BAR="━━━━━"
+((LEN = ${#BAR} * 6))
+OUTT="$PUR$BAR$PUR$BAR$CYN$BAR$CYN$BAR$PUR$BAR$PUR$BAR$RST"
+OUTB="$BPUR$BAR$BPUR$BAR$BCYN$BAR$BCYN$BAR$BPUR$BAR$BPUR$BAR$RST"
+
+# array for info entries
+ENTS=()
+
+# function for creating entries
+mkent() {
+    if [[ "$#" != 2 ]]; then
+        printf "!! invalid number of arguments to make_entry().\n"
+        exit
+    fi
+
+    local ENT="$2"
+    while ((${#ENT} < LEN - ${#1})); do
+        ENT=" $ENT"
+    done
+
+    ENT="$CNAME""$1""$CTEXT""$ENT""$RST"
+    ENTS+=("$ENT")
+}
+
+
+# entry settings
+CNAME="$BLU" # color of entry name
+CTEXT="$WHT" # color of entry text
+
+#
+# add entries here!
+# format: mkent NAME TEXT
+#
+
+#sep=
+#s=$d$f0$sep$t
+
+#w=
+#wmname="WM" "$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")"
+
+
+mkent "OS" "$(cat /etc/os-release | grep NAME -m 1 | sed 's/NAME=//g' | sed 's/\"//g')"
+mkent "User" "$(printenv USER)"
+mkent "Shell" "$(basename $(printenv SHELL))"
+mkent "WM" "$(xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"{print $5}') -notype -f _NET_WM_NAME 8t | grep "WM_NAME" | cut -f2 -d \")"
+mkent "Date" "$(date '+%d %B %Y')"
+mkent "Uptime" "$(uptime -p)"
+
+# print everything
+
+# sysinfo
+printf "%s%b" "$PADC" "$OUTT\n"
+for ENT in "${ENTS[@]}"; do
+    printf "%s%b" "$PADC" "$ENT\n"
+done
+printf "%s%b" "$PADC" "$OUTB\n"
+
+
