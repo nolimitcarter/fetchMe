@@ -4,12 +4,14 @@
 
 <p align="center">A minimalist system information tool written in bash shell.</p><br>
 
-<img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/image1.jpg" width="30%" align="right">
+<img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/updated.jpg" width="30%" align="right">
 <br>
 FetchMe is a command-line system information tool written
 in bash. FetchMe displays fully cusomizable information 
-about your operating system, software and hardware in an 
+about your operating system, software, and hardware in an 
 aesthetic and visually pleasing way.
+<br>
+<br>
 <br>
 <br>
 
