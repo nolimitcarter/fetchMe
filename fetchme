@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Term stolen from gk
-# https://github.com/6gk/fet.sh/blob/d31ae95231d640f0c4e6c48fd2918fc6dd88dd84/fet.sh#L11-L26
 while [ ! "$term" ]; do
 	while IFS=':	' read -r key val; do
 		case $key in
