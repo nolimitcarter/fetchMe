@@ -47,7 +47,7 @@ BAR="━━━━━"
 OUTT="$white$BAR$white$BAR$blue$BAR$blue$BAR$white$BAR$white$BAR$RST"
 OUTB="$purple$BAR$purple$BAR$cyan$BAR$cyan$BAR$purple$BAR$purple$BAR$RST"
 
-
+# creds to gfetch for the ghost
 cat <<EOF
 
   $white$BAR$white$BAR$blue$BAR$blue$BAR$white$BAR$white$BAR$RST
