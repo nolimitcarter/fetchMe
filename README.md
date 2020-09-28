@@ -7,7 +7,7 @@
 <img src="https://github.com/nolimitcarter/fetchme/blob/master/pics/updated.jpg" width="30%" align="right">
 <br>
 FetchMe is a command-line system information tool written
-in bash. FetchMe displays fully cusomizable information 
+in bash. FetchMe displays fully customizable information 
 about your operating system, software, and hardware in an 
 aesthetic and visually pleasing way.
 <br>
