@@ -18,11 +18,12 @@ done
 
 id_bloat=$(xprop -root _NET_SUPPORTING_WM_CHECK)
 id=${id_bloat##* }
-wm_bloat=$(xprop -id "$id" _NET_WM_NAME)
 distro=$(. /etc/os-release ; echo "$ID")
+wm_bloat=$(xprop -id "$id" _NET_WM_NAME)
+wm="$(echo $wm_bloat | cut -d'"' -f 2)"
 shell="$(basename ${SHELL})"
 packages="$(pacman -Qq | wc -l)"
-wm="$(echo $wm_bloat | cut -d'"' -f 2)"
+user="$(printenv USER)"
 
 
 # color escapes
@@ -54,7 +55,7 @@ cat <<EOF
 ${c0}${CYN}      ----      ${c0}${blue}${c0}${yellow} os ${reset}${c0}${blue}  ${cr}${white}${distro}${reset}
 ${c0}${CYN}     / O O\     ${c0}${blue}${c0}${yellow} wm ${reset}${c0}${blue}  ${cr}${white}${wm}${reset}
 ${c0}${CYN}    |      |    ${c0}${blue}${c0}${yellow} tm ${reset}${c0}${blue}  ${cr}${white}${term}${reset}
-${c0}${CYN}    |/\/\/\|    ${c0}${blue}${c0}${yellow} pk ${reset}${c0}${blue}  ${cr}${white}${packages}${reset}
-${c0}${orange}   ----------   ${c0}${blue}${c0}${yellow} sh ${reset}${c0}${blue}  ${cr}${white}${shell}${reset}
+${c0}${CYN}    |/\/\/\|    ${c0}${blue}${c0}${yellow} sh ${reset}${c0}${blue}  ${cr}${white}${shell}${reset}
+${c0}${orange}   ----------   ${c0}${blue}${c0}${yellow} ur ${reset}${c0}${blue}  ${cr}${white}${user}${reset}
   $white$BAR$white$BAR$blue$BAR$blue$BAR$white$BAR$white$BAR$RST
 EOF
